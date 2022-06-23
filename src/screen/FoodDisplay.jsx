@@ -36,7 +36,7 @@ const FoodDisplay = ({navigation}) => {
             categories.length > 0 ? <FlatList
             data={categories}
             renderItem={CateGoryItem}
-            keyExtractor={item => item.index}
+            keyExtractor={item => item.idCategory}
             horizontal
             showsHorizontalScrollIndicator={false}
           /> :  <SafeAreaView style={LoadingStyles.LodingContainer}>

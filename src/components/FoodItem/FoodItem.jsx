@@ -2,9 +2,7 @@ import React from 'react';
 import {Image, View, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native';
 import Buttons from '../Buttons/Buttons';
 import MainText from '../MainText/MainText';
-import { MaterialCommunityIcons ,MaterialIcons } from '@expo/vector-icons'; 
 import { FoodItemStyle } from '../../Styles/FoodStyles';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const FoodItem = ({foods, navigation}) => {
 
@@ -24,7 +22,7 @@ const FoodItemRender = ({ item }) => (
             foods.length > 0 && <FlatList
             data={foods}
             renderItem={FoodItemRender}
-            keyExtractor={item => item.index}
+            keyExtractor={item => item.idMeal}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           /> 
@@ -34,6 +32,3 @@ const FoodItemRender = ({ item }) => (
 }
 
 export default FoodItem;
-// :  <SafeAreaView style={LoadingStyles.LodingContainer}>
-//                  <ActivityIndicator color="blue" size="large" />
-//                 </SafeAreaView>
